@@ -61,11 +61,6 @@ char match_bracket(char close_bracket)
 
 bool validate_expression(string exp)
 {
-	if (Is_operator(exp[exp.length() - 1])) //if there is an operator at the end of string
-	{
-		return false;
-	}
-
 	Stack stack;
 	for (int i = 0; i < exp.length(); i++)
 	{
@@ -73,22 +68,28 @@ bool validate_expression(string exp)
 		{
 			return false;   //means it is some specal character
 		}
+
 		else if (Opening_bracket(exp[i]))  
 		{
 			if (i != exp.length() - 1) //means if it is not the last character
 			{
-				if (Is_operator(exp[i + 1]) || Closing_bracket(exp[i + 1])) //if it is like (+ OR
+				/* if it is like (+ OR there is a closing bracket immediately after a opening bracket */
+				if (Is_operator(exp[i + 1]) || Closing_bracket(exp[i + 1])) 
 				{
-					return false; //if there is a closing bracket immediately after a opening bracket
+					return false; 
 				}
+
+				/* if it is not the first character and there is a closing bracket or an operand immediately 
+				before the opening bracket */
+				else if (i != 0 && (Closing_bracket(exp[i - 1]) || (Is_operand(exp[i - 1]))))
+				{
+					return false;
+				}
+
 				else if (!(Is_operator(exp[i + 1]))) //CAN IT BE WRITTEN AS ONLY ELSE INSTEAD OF ELSE IF?
 				{
 					stack.push(exp[i]);
 				}
-			}
-			else if (i != 0 && !(Closing_bracket(exp[i - 1]))) //if it is not the first character and 
-			{
-				return false;     // there is a closing bracket immediately before the opening bracket
 			}
 			else //if last character is opening bracket
 			{
@@ -113,15 +114,20 @@ bool validate_expression(string exp)
 		{
 			if (i != 0) //closing bracket is not the first character
 			{
-				if (Is_operator(exp[i - 1]) || Opening_bracket(exp[i - 1]))  //if it is like +)  OR
+				/* if it is like +)  OR there is a opening bracket immediately before a closing bracket */
+				if (Is_operator(exp[i - 1]) || Opening_bracket(exp[i - 1]))  
 				{
-					return false;	// if there is a opening bracket immediately before a closing bracket
+					return false;	
 				}
-				else if (i!=exp.length()-1 && Opening_bracket(exp[i + 1])) //if it is not the last character
+
+				/* if it is not the last character and there is an opening bracket or there is an operand 
+				 immediately after a closing bracket ===> like ")(" or ")+" */   
+				else if (i != exp.length() - 1 && (Opening_bracket(exp[i + 1]) || (Is_operand(exp[i + 1]) )))
 				{
-					return false;  //and there is an opening bracket immediately after a closing bracket
+					return false;  
 				}
-				else if (!(Is_operator(exp[i - 1])))
+
+				else /*if (!(Is_operator(exp[i - 1])))*/
 				{
 					if (stack.peek() == match_bracket(exp[i])) //if top bracket at stack is matched with closing one
 					{
@@ -140,13 +146,12 @@ bool validate_expression(string exp)
 			else //closing bracket is the first character
 			{
 				return false;
-			}
-			
+			}		
 		}
-		else if (Is_operand(exp[i]))
-		{
-			//do nothing
-		}
+		//else if (Is_operand(exp[i]))
+		//{
+		//	//do nothing
+		//}
 	}
 	if (!stack.isEmpty())
 	{
@@ -173,8 +178,7 @@ string infix_to_postfix(string infix)
 			if (i != infix.length() - 1 && !(Is_operand(infix[i + 1]))) //if it is not last character and
 			{
 				postfix = postfix + " ";  //next character is not operand then insert space
-			}
-			//SEE IF THESE CHANGES HAVE TO BE MADE EVERYWHERE WHEN WE ARE PUSHING 
+			} 
 		}
 		else if (Opening_bracket(infix[i])) //starting bracket
 		{
@@ -219,16 +223,92 @@ string infix_to_postfix(string infix)
 	return postfix;
 }
 
+float evaluate_operation(float num_1, float num_2, char op)
+{
+	switch(op)
+	{
+	case '+':
+		return (num_2 + num_1);
+
+	case '-':
+		return (num_2 - num_1);
+
+	case '*':
+		return (num_2 * num_1);
+
+	case '/':
+		if (num_1 == 0)
+		{
+			return -32768;
+		}
+		return (num_2 / num_1);
+
+	case '%':
+		return (int(num_2) % int(num_1));
+
+	case '^':
+		int power = 1;
+		for (int i = 0; i < num_1; i++)
+		{
+			power = power * num_2;
+		}
+		return power;
+	}
+}
+
+int evaluate_postfix(string postfix)
+{
+	Stack stack;
+	int multi_digit = 0;
+	int ans = 0;
+
+	for (int i = 0; postfix[i] != '\0'; i++)
+	{
+		if (Is_operand(postfix[i]))
+		{
+			if (i != postfix.length() && !(Is_operand(postfix[i + 1])) && postfix[i + 1]!= ' ') //if it is not last character and is single digit
+			{
+				stack.push(postfix[i]);
+			}
+			multi_digit = multi_digit * 10 + (postfix[i] - '0');
+		}
+		else if (postfix[i] == ' ')
+		{
+			stack.push(multi_digit);
+			multi_digit = 0;
+		}
+		else if (Is_operator(postfix[i]))
+		{
+			int no_1 = stack.pop();
+			int no_2 = stack.pop();
+
+			ans = evaluate_operation(no_1, no_2, postfix[i]);
+			if (ans == -32768)
+			{
+				cout << "Can't Divide by Zero" << endl;
+				return ans;
+			}
+			stack.push(ans);
+		}
+	}
+	return stack.pop();
+}
+
 int main()
 {
 	string expression;
 	cout << "Enter a expression : " << endl;
 	getline(cin, expression);
 	//cout << validate_expression(expression) << endl;
-	if (validate_expression(expression))
+	while (!validate_expression(expression))
 	{
-		string post = infix_to_postfix(expression);
-		cout << post;
+		cout << "WRONG. Enter a expression : " << endl;
+		getline(cin, expression);
 	}
-	
+	string postfix = infix_to_postfix(expression);
+	cout << postfix << endl;
+	int answer = evaluate_postfix(postfix);
+	cout << answer << endl;
+
+	cout << (23 - 14 / (9 - (5 + 9))*87 % 7) << endl;
 }
