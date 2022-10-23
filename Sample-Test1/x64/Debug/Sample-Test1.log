@@ -1,0 +1,4 @@
+﻿  test.cpp
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(169): warning C4715: 'match_bracket': not all control paths return a value
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(428): warning C4715: 'evaluate_operation': not all control paths return a value
+  Sample-Test1.vcxproj -> D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\x64\Debug\Sample-Test1.exe

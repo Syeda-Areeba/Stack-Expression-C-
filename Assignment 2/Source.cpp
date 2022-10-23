@@ -362,7 +362,7 @@ string infix_to_postfix(string infix)
 /*-------------------------------------------------------------------------------------------------------------------
 									FUNCTION TO CALCULATE ANSWER BASED ON OPERATOR
 -------------------------------------------------------------------------------------------------------------------*/
-float evaluate_operation(float num_1, float num_2, char op)
+int evaluate_operation(int num_1, int num_2, char op)
 {
 	switch(op)
 	{
@@ -383,7 +383,11 @@ float evaluate_operation(float num_1, float num_2, char op)
 		return (num_2 / num_1);
 
 	case '%':
-		return (int(num_2) % int(num_1));
+		if (num_1 == 0)
+		{
+			return -32768;
+		}
+		return (num_2 % num_1);
 
 	case '^':
 		int power = 1;
@@ -433,6 +437,17 @@ int evaluate_postfix(string postfix)
 	return stack.pop();
 }
 
+
+string evaluate(string exp)
+{
+	if(!validate_expression(exp))
+	{
+		return "Invalid Expression";
+	}
+	int i = evaluate_postfix(infix_to_postfix(exp));
+	return to_string(i);
+}
+
 /*-------------------------------------------------------------------------------------------------------------------
 													MAIN FUNCTION
 -------------------------------------------------------------------------------------------------------------------*/
@@ -455,7 +470,19 @@ int main()
 	cout << "Final Answer is: " << answer << endl;
 
 	//cout << (23 - 14 / (9 - (5 + 9))*87 % 7) << endl;
-	cout << (((pow(5,2) + 2) - 9 % 100) + (((27 + 2) + 1))) << endl;
+	//cout << (((pow(5,2) + 2) - 9 % 100) + (((27 + 2) + 1))) << endl;
 	//cout << 78 - 9 - 99 - 92 - 12 - (22 / ((1 ^ 4) ^ 2) * 22) + 23;
 	//cout << 78 - 9 - 99 - 92 - 12 - (22 / (pow(pow(1, 4), 2)) * 22) + 23 << endl;
+	//[{2 + 3((4 * 1) / 3 ^ 2)} + { [1 + 3 / 4 * (5 - 9) % 31] }]
+
+	/*string exp[21] = { "(7)+","()", "+(0)","(+9)","(9+)","[()]","&","87 = 87","(5 + 6)(7 - 6)",")(",")9^5(", "1(2)",
+		"[-]", "9-0w", "*2", "3*","4-1*{r}","%","(7-/8)","++9","-7" };
+	int i = 0;
+	while (!validate_expression(exp[i]))
+	{
+		cout << i+1  << " " << exp[i] << " INVALID. Please try again." << endl;
+		i++;
+		if (i >= 21)
+			break;
+	}*/
 }

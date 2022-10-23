@@ -1,10 +1,123 @@
 ﻿  Source.cpp
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(366,22): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(372,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(374,10): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(400,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(400,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(400,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(134): warning C4715: 'match_bracket': not all control paths return a value
-D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(376): warning C4715: 'evaluate_operation': not all control paths return a value
-  Assignment 2.vcxproj -> D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\x64\Debug\Assignment 2.exe
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(10,1): error C2084: function 'Node::Node(void)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(37): message : see previous definition of '{ctor}'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(15,1): error C2084: function 'Node::Node(int)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(42): message : see previous definition of '{ctor}'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(20,1): error C2084: function 'void Node::set_data(int)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(47): message : see previous definition of 'set_data'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(24,1): error C2084: function 'void Node::set_next(Node *)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(51): message : see previous definition of 'set_next'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(28,1): error C2084: function 'int Node::get_data(void) const' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(55): message : see previous definition of 'get_data'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(32,1): error C2084: function 'Node *Node::get_next(void) const' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(59): message : see previous definition of 'get_next'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(40,1): error C2084: function 'Stack::Stack(void)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(67): message : see previous definition of '{ctor}'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(44,1): error C2084: function 'bool Stack::isEmpty(void)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(71): message : see previous definition of 'isEmpty'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(52,1): error C2084: function 'void Stack::push(int)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(79): message : see previous definition of 'push'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(55,23): error C2264: 'Node::Node': error in function definition or declaration; function not called
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(59,30): error C2264: 'Node::Node': error in function definition or declaration; function not called
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(65,1): error C2084: function 'int Stack::pop(void)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(92): message : see previous definition of 'pop'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(80,1): error C2084: function 'int Stack::peek(void)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(107): message : see previous definition of 'peek'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(91,6): error C2084: function 'bool Is_operator(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(119): message : see previous definition of 'Is_operator'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(100,6): error C2084: function 'bool Is_operand(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(128): message : see previous definition of 'Is_operand'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(109,6): error C2084: function 'bool Opening_bracket(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(137): message : see previous definition of 'Opening_bracket'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(118,6): error C2084: function 'bool Closing_bracket(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(146): message : see previous definition of 'Closing_bracket'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(127,6): error C2084: function 'char match_bracket(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(155): message : see previous definition of 'match_bracket'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(170,5): error C2084: function 'int check_precedence(char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(198): message : see previous definition of 'check_precedence'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(196,6): error C2084: function 'bool validate_expression(std::string)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(224): message : see previous definition of 'validate_expression'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(198,13): error C2264: 'Stack::Stack': error in function definition or declaration; function not called
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,9): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,32): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,6): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,6): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,6): message : could be 'bool Is_operand(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,54): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(201,81): error C2065: 'Closing_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(206,12): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(211,9): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(211,36): error C2065: 'Closing_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(211,63): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(211,63): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(211,63): message : could be 'bool Closing_bracket(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(218,25): error C2065: 'Closing_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(218,57): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(218,13): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(218,13): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(218,13): message : could be 'bool Is_operand(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(223,16): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(223,14): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(233,12): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(237,9): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(237,36): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(237,59): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(237,59): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(237,59): message : could be 'bool Is_operator(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(247,12): error C2065: 'Closing_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(252,9): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(252,36): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(252,63): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(252,63): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(252,63): message : could be 'bool Opening_bracket(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(259,40): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(259,72): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(259,13): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(259,13): error C2568: '||': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(259,13): message : could be 'bool Is_operand(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(266,26): error C2065: 'match_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(304,8): error C2084: function 'std::string infix_to_postfix(std::string)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(332): message : see previous definition of 'infix_to_postfix'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(307,13): error C2264: 'Stack::Stack': error in function definition or declaration; function not called
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(311,7): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(314,35): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(314,33): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(319,12): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(323,12): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(325,27): error C2065: 'Opening_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(326,5): error C2065: 'check_precedence': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(326,34): error C2065: 'check_precedence': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(326,64): error C2568: '>': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(326,64): message : could be 'int check_precedence(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(332,36): error C2065: 'check_precedence': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(332,65): error C2065: 'check_precedence': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(332,95): error C2568: '>': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(332,95): message : could be 'int check_precedence(char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(340,12): error C2065: 'Closing_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(342,27): error C2065: 'match_bracket': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(365,5): error C2084: function 'int evaluate_operation(int,int,char)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(393): message : see previous definition of 'evaluate_operation'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(405,5): error C2084: function 'int evaluate_postfix(std::string)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(433): message : see previous definition of 'evaluate_postfix'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(407,13): error C2264: 'Stack::Stack': error in function definition or declaration; function not called
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(413,7): error C2065: 'Is_operand': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(422,12): error C2065: 'Is_operator': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(427,10): error C2065: 'evaluate_operation': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(427,52): error C2568: '=': unable to resolve function overload
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(427,52): message : could be 'int evaluate_operation(int,int,char)'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(441,8): error C2084: function 'std::string evaluate(std::string)' already has a body
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Stack.h(469): message : see previous definition of 'evaluate'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(443,6): error C2065: 'validate_expression': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(443,5): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(447,27): error C2065: 'infix_to_postfix': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(447,10): error C2065: 'evaluate_postfix': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(447,49): error C2440: 'initializing': cannot convert from 'int (__cdecl *)(std::string)' to 'int'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(447,8): message : There is no context in which this conversion is possible
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(461,10): error C2065: 'validate_expression': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(461,9): warning C4551: function call missing argument list
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(467,19): error C2065: 'infix_to_postfix': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(467,47): error C2440: 'initializing': cannot convert from 'std::string (__cdecl *)(std::string)' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(467,47): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(469,15): error C2065: 'evaluate_postfix': undeclared identifier
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(469,40): error C2440: 'initializing': cannot convert from 'int (__cdecl *)(std::string)' to 'int'
+D:\BS(AI)\sem 3\Data structures\Assignments\Assignment 2\Assignment 2\Assignment 2\Source.cpp(469,13): message : There is no context in which this conversion is possible
