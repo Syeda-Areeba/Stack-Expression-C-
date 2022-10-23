@@ -172,29 +172,6 @@ char match_bracket(char close_bracket)
 									FUNCTION TO ASSIGN AND CHECK PRECEDENCE
 -------------------------------------------------------------------------------------------------------------------*/
 
-//int check_precedence(char op)  //	NORMAL PRECEDENCE (JUST TO CHECK)
-//{
-//	switch (op)
-//	{
-//	case '+':
-//	case '-':
-//		return 1;
-//
-//	case '*':
-//	case '/':
-//		return 2;
-//
-//	case '%':
-//		return 3;
-//
-//	case '^':
-//		return 4;
-//
-//	default:
-//		return  0;
-//	}
-//}
-
 int check_precedence(char op)
 {
 	switch (op)
@@ -235,20 +212,21 @@ bool validate_expression(string exp)
 		{
 			if (i != exp.length() - 1) //means if it is not the last character
 			{
-				/* if it is like (+ OR there is a closing bracket immediately after a opening bracket */
+				/* if there is an operator or a closing bracket immediately after the opening bracket
+				it is like (+ OR () */
 				if (Is_operator(exp[i + 1]) || Closing_bracket(exp[i + 1]))
 				{
 					return false;
 				}
 
 				/* if it is not the first character and there is a closing bracket or an operand immediately
-				before the opening bracket */
+				before the opening bracket ----- if it is like ()() OR +( */ 
 				else if (i != 0 && (Closing_bracket(exp[i - 1]) || (Is_operand(exp[i - 1]))))
 				{
 					return false;
 				}
 
-				else if (!(Is_operator(exp[i + 1]))) //CAN IT BE WRITTEN AS ONLY ELSE INSTEAD OF ELSE IF?
+				else /*if (!(Is_operator(exp[i + 1])))*/ //CAN IT BE WRITTEN AS ONLY ELSE INSTEAD OF ELSE IF?
 				{
 					stack.push(exp[i]);
 				}
@@ -289,16 +267,12 @@ bool validate_expression(string exp)
 					return false;
 				}
 
-				else /*if (!(Is_operator(exp[i - 1])))*/
+				else 
 				{
 					if (stack.peek() == match_bracket(exp[i])) //if top bracket at stack is matched with closing one
 					{
 						stack.pop();
 					}
-					//else if (stack.pop() == '\0') //stack underflow
-					//{
-					//	return false;
-					//}
 					else
 					{
 						return false;
@@ -310,10 +284,6 @@ bool validate_expression(string exp)
 				return false;
 			}
 		}
-		//else if (Is_operand(exp[i]))
-		//{
-		//	//do nothing
-		//}
 	}
 	if (!stack.isEmpty())
 	{
@@ -473,6 +443,12 @@ string evaluate(string exp)
 		return "Invalid Expression";
 	}
 	int i = evaluate_postfix(infix_to_postfix(exp));
-	return to_string(i);
+	if (i != -32768)
+	{
+		return to_string(i);
+	}
+	else
+	{
+		return "Invalid Expression";
+	}
 }
-

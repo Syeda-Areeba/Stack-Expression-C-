@@ -30,14 +30,15 @@ TEST(TestCaseEvaluateExp, T7) {
 	string exp = "2+1(3*2)";
 	EXPECT_EQ("Invalid Expression", evaluate(exp));
 }
-//TEST(TestCaseEvaluateExp, T8) {
-//	string exp = "8%0";
-//	EXPECT_EQ("Invalid Expression", evaluate(exp));
-//}
-//TEST(TestCaseEvaluateExp, T9) {
-//	string exp = "8/0";
-//	EXPECT_EQ("Invalid Expression", evaluate(exp));
-//}
+
+TEST(TestCaseEvaluateExp, T8) {
+	string exp = "8%0";
+	EXPECT_EQ("Invalid Expression", evaluate(exp));
+}
+TEST(TestCaseEvaluateExp, T9) {
+	string exp = "8/0";
+	EXPECT_EQ("Invalid Expression", evaluate(exp));
+}
 
 TEST(TestCaseEvaluateExp, T10)
 {
